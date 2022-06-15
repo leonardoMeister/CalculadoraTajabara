@@ -17,7 +17,7 @@ namespace CalculadoraTajabara.Dominio
             this.Num2 = segundoValor;
         }
 
-        public static double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
+        public double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
         {
             double resultado = primeiroValor * segundoValor;
 
