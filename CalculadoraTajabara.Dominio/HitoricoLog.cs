@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-    internal class HitoricoLog
+    public class HitoricoLog
     {
 
     }
