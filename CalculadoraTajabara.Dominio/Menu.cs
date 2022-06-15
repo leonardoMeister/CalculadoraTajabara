@@ -39,37 +39,46 @@ namespace CalculadoraTajabara.Dominio
                 {
                     case "1":
                         ope = new Soma();
-                        ope.PegarDados();
-                        ope.RealizarCalculo();
-                        hist.GravarOperacao(ope);
-
+                        RealizarOperacao(ope);
                         break;
+
                     case "2":
                         ope = new Subtracao();
-                        ope.PegarDados();
-                        ope.RealizarCalculo(); 
-                        hist.GravarOperacao(ope);
-
+                        RealizarOperacao(ope);
                         break;
+
                     case "3":
                         ope = new Divisao();
-                        ope.PegarDados();
-                        ope.RealizarCalculo();
-                        hist.GravarOperacao(ope);
-
+                        RealizarOperacao(ope);
                         break;
+
                     case "4":
                         ope = new Multiplicacao();
-                        ope.PegarDados();
-                        ope.RealizarCalculo();
-                        hist.GravarOperacao(ope);
+                        RealizarOperacao(ope);
                         break;
+
                     case "5":
                         MostrarOperacoes();
                         break;
                 }
 
             }
+        }
+
+        private void RealizarOperacao(Operacao ope)
+        {
+            PegarDados(ope);
+            Console.WriteLine(ope.RealizarCalculo());
+            Console.ReadKey();
+            hist.GravarOperacao(ope);
+        }
+
+        public void PegarDados(Operacao operacao)
+        {
+            Console.WriteLine("Informe o primeiro numero:");
+            operacao.Num1 = Convert.ToDouble(Console.ReadLine());
+            Console.WriteLine("Informe o segundo numero:");
+            operacao.Num2 = Convert.ToDouble(Console.ReadLine());
         }
 
         private void MostrarOperacoes()
@@ -116,7 +125,6 @@ namespace CalculadoraTajabara.Dominio
             Console.WriteLine("Calculadora Tabajara\n");
 
             Console.WriteLine("Tela Principal\n");
-
         }
     }
 }

@@ -13,16 +13,11 @@ namespace CalculadoraTajabara.Dominio
         {
             Operador = '-';
         }
-        public override double RealizarCalculo()
+        public override string RealizarCalculo()
         {
-            double resultado = Num1 - Num2;
+            this.Resultado = Num1 - Num2;
 
-            this.Resultado = resultado;
-
-            Console.WriteLine(this.ToString());
-            Console.ReadLine();
-
-            return resultado;
+            return this.ToString();
         }
 
     }
