@@ -9,10 +9,17 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Soma : Operacao
     {
-
-        public void RealizarSoma()
+        public Soma()
         {
-            Resultado = Num1 + Num2;
+            Operador = '+';
+        }
+        public override double RealizarCalculo()
+        {
+            double resultado = Num1 + Num2;
+
+            this.Resultado = resultado;
+
+            return resultado;
         }
     }
 }
