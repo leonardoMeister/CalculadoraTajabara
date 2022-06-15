@@ -17,8 +17,6 @@ namespace CalculadoraTajabara.Dominio
         {
             double resultado = Num1 / Num2;
 
-            HistoricoLog.GravarOperacao(this.ToString());
-
             this.Resultado = resultado;
 
             return resultado;

@@ -9,6 +9,8 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Menu
     {
+        HistoricoLog hist = new HistoricoLog();
+
         public void MostrarMenu()
         {
             string opcao;
@@ -39,23 +41,43 @@ namespace CalculadoraTajabara.Dominio
                         ope = new Soma();
                         ope.PegarDados();
                         ope.RealizarCalculo();
+                        hist.GravarOperacao(ope);
+
                         break;
                     case "2":
                         ope = new Subtracao();
                         ope.PegarDados();
-                        ope.RealizarCalculo();
+                        ope.RealizarCalculo(); 
+                        hist.GravarOperacao(ope);
+
                         break;
                     case "3":
                         ope = new Divisao();
                         ope.PegarDados();
                         ope.RealizarCalculo();
+                        hist.GravarOperacao(ope);
+
                         break;
                     case "4":
                         ope = new Multiplicacao();
                         ope.PegarDados();
                         ope.RealizarCalculo();
+                        hist.GravarOperacao(ope);
+                        break;
+                    case "5":
+                        MostrarOperacoes();
                         break;
                 }
+
+            }
+        }
+
+        private void MostrarOperacoes()
+        {
+            foreach(var ope in hist.operacoes)
+            {
+                Console.WriteLine(ope.ToString());
+                Console.WriteLine("----------------------------------------");
             }
         }
 
