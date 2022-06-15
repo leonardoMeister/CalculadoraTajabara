@@ -4,9 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CalculadoraTajabara.Dominio
+namespace CalculadoraTajabara.Dominio.Dominio
 {
-    public class Menu
+    public class Operacao
     {
+
+
     }
 }
