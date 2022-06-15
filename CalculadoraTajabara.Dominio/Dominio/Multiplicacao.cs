@@ -7,18 +7,19 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-
-    public  class Multiplicacao: Operacao
+    public class Multiplicacao : Operacao
     {
-        public static double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
+        public Multiplicacao()
         {
-            string operacao = "Multiplicacao";
-            double resultado = primeiroValor / segundoValor;
+            Operador = '*';
+        }
+        public override double RealizarCalculo()
+        {
+            double resultado = Num1 * Num2;
 
-            HitoricoLog.Gravar(operacao, primeiroValor, segundoValor, resultado);
+            this.Resultado = resultado;
 
             return resultado;
         }
-
     }
 }

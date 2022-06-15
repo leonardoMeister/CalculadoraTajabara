@@ -7,7 +7,20 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-    internal class Subtracao: Operacao
+    public class Subtracao : Operacao
     {
+        public Subtracao()
+        {
+            Operador = '-';
+        }
+        public override double RealizarCalculo()
+        {
+            double resultado = Num1 - Num2;
+
+            this.Resultado = resultado;
+
+            return resultado;
+        }
+
     }
 }
