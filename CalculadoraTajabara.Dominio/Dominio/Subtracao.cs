@@ -9,6 +9,11 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Subtracao : Operacao
     {
+        public string operacao;
+        public double resultado;
+        public double primeiroValor;
+        public double segundoValor;
+
         public Subtracao(string operacao, double resultado, double primeiroValor, double segundoValor)
         {
             this.operacao = operacao;
