@@ -9,20 +9,19 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Divisao: Operacao
     {      
-        public Divisao(string operacao, double resultado, double primeiroValor, double segundoValor)
+        public Divisao(char operacao, double resultado, double primeiroValor, double segundoValor)
         {
-            this.operacao = operacao;
-            this.resultado = resultado;
-            this.primeiroValor = primeiroValor;
-            this.segundoValor = segundoValor;
+            this.Operador = operacao;
+            this.Resultado = resultado;
+            this.Num1 = primeiroValor;
+            this.Num2 = segundoValor;
         }
 
-        public static double DivisaoNumeros(double primeiroValor, double segundoValor)
+        public double DivisaoNumeros(double primeiroValor, double segundoValor)
         {
-            string operacao = "Divisão";
             double resultado = primeiroValor / segundoValor;
-
-            HitoricoLog.Gravar(operacao, primeiroValor,segundoValor,resultado);
+            
+            HistoricoLog.GravarOperacao(this.ToString());
 
             return resultado;   
         }
