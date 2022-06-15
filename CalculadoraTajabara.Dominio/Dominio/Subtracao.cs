@@ -9,27 +9,22 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Subtracao : Operacao
     {
-        public string operacao;
-        public double resultado;
-        public double primeiroValor;
-        public double segundoValor;
-
-        public Subtracao(string operacao, double resultado, double primeiroValor, double segundoValor)
+        public Subtracao(char operacao, double resultado, double primeiroValor, double segundoValor)
         {
-            this.operacao = operacao;
-            this.resultado = resultado;
-            this.primeiroValor = primeiroValor;
-            this.segundoValor = segundoValor;
+            this.Operador = operacao;
+            this.Resultado = resultado;
+            this.Num1 = primeiroValor;
+            this.Num2 = segundoValor;
         }
 
-        public static double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
+        public static double SubstracaoNumeros(double primeiroValor, double segundoValor)
         {
-            string operacao = "Subtração";
             double resultado = primeiroValor - segundoValor;
 
-            HitoricoLog.Gravar(operacao, primeiroValor, segundoValor, resultado);
+            HistoricoLog.GravarOperacao(this.ToString());
 
             return resultado;
         }
+
     }
 }
