@@ -9,22 +9,19 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Multiplicacao : Operacao
     {
-        public Multiplicacao(char operacao, double resultado, double primeiroValor, double segundoValor)
+        public Multiplicacao()
         {
-            this.Operador = operacao;
-            this.Resultado = resultado;
-            this.Num1 = primeiroValor;
-            this.Num2 = segundoValor;
+            Operador = '*';
         }
-
-        public double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
+        public override double RealizarCalculo()
         {
-            double resultado = primeiroValor * segundoValor;
+            double resultado = Num1 * Num2;
 
             HistoricoLog.GravarOperacao(this.ToString());
 
+            this.Resultado = resultado;
+
             return resultado;
         }
-
     }
 }
