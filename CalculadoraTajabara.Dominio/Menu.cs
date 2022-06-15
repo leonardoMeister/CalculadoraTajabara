@@ -79,11 +79,13 @@ namespace CalculadoraTajabara.Dominio
                 Console.WriteLine(ope.ToString());
                 Console.WriteLine("----------------------------------------");
             }
+
+            Console.ReadLine();
         }
 
         private bool ValidarOpcao(string opcao)
         {
-            if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4") return false;
+            if (opcao != "1" && opcao != "2" && opcao != "3" && opcao != "4" && opcao != "5") return false;
 
             return true;
         }
@@ -102,6 +104,7 @@ namespace CalculadoraTajabara.Dominio
             Console.WriteLine("Digite 2 para Subtracao\n");
             Console.WriteLine("Digite 3 para Divisao\n");
             Console.WriteLine("Digite 4 para Multiplicacao\n");
+            Console.WriteLine("Digite 5 para Vizualização\n");
             opcao = Console.ReadLine();
             return opcao;
         }

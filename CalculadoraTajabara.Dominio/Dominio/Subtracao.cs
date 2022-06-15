@@ -19,6 +19,9 @@ namespace CalculadoraTajabara.Dominio
 
             this.Resultado = resultado;
 
+            Console.WriteLine(this.ToString());
+            Console.ReadLine();
+
             return resultado;
         }
 

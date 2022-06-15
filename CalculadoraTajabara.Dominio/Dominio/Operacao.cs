@@ -25,9 +25,9 @@ namespace CalculadoraTajabara.Dominio.Dominio
 
         public void PegarDados()
         {
-            Console.WriteLine("Informe o numero 1");
+            Console.WriteLine("Informe o primeiro numero:");
             Num1 =  Convert.ToDouble( Console.ReadLine());
-            Console.WriteLine("Informe o numero 2");
+            Console.WriteLine("Informe o segundo numero:");
             Num2 = Convert.ToDouble(Console.ReadLine());
         }
     }
