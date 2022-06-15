@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-    internal class Divisao
+    public static class Divisao
     {
+        public static double DivisaoNumeros(double primeiroValor, double segundoValor)
+        {
+            string operacao = "Divisão";
+            double resultado = primeiroValor / segundoValor;
+
+            HitoricoLog.Gravar(operacao, primeiroValor,segundoValor,resultado);
+
+            return resultado;   
+        }
+
     }
 }
