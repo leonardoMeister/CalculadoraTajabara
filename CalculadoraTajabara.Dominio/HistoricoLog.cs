@@ -6,8 +6,11 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-    public class HitoricoLog
+    public static class HistoricoLog
     {
+        public static void GravarOperacao()
+        {
 
+        }
     }
 }
