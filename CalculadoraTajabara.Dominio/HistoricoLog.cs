@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculadoraTajabara.Dominio.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,11 +7,17 @@ using System.Threading.Tasks;
 
 namespace CalculadoraTajabara.Dominio
 {
-    public static class HistoricoLog
+    public class HistoricoLog
     {
-        public static void GravarOperacao()
+        public List<Operacao> operacoes;
+        public HistoricoLog()
         {
+            operacoes = new();
+        }
 
+        public void GravarOperacao(Operacao operacao)
+        {
+            operacoes.Add(operacao);
         }
     }
 }
