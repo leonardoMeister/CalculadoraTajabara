@@ -17,5 +17,18 @@ namespace CalculadoraTajabara.Dominio.Dominio
         {
             return $"{Num1} {Operador} {Num2} = {Resultado}";
         }
+
+        public virtual double RealizarCalculo()
+        {
+            return 0;
+        }
+
+        public void PegarDados()
+        {
+            Console.WriteLine("Informe o numero 1");
+            Num1 =  Convert.ToDouble( Console.ReadLine());
+            Console.WriteLine("Informe o numero 2");
+            Num2 = Convert.ToDouble(Console.ReadLine());
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CalculadoraTajabara.Dominio.Dominio;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,7 +8,7 @@ using System.Threading.Tasks;
 namespace CalculadoraTajabara.Dominio
 {
 
-    public static class Multiplicacao
+    public  class Multiplicacao: Operacao
     {
         public static double MultiplicacaoNumeros(double primeiroValor, double segundoValor)
         {

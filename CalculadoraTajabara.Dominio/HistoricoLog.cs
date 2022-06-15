@@ -8,7 +8,7 @@ namespace CalculadoraTajabara.Dominio
 {
     public static class HistoricoLog
     {
-        public static void GravarOperacao()
+        public static void GravarOperacao(string log)
         {
 
         }

@@ -9,6 +9,7 @@ namespace CalculadoraTajabara.Dominio
 {
     public class Soma : Operacao
     {
+
         public void RealizarSoma()
         {
             Resultado = Num1 + Num2;

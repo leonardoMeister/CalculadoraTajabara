@@ -8,22 +8,20 @@ using System.Threading.Tasks;
 namespace CalculadoraTajabara.Dominio
 {
     public class Divisao: Operacao
-    {      
-        public Divisao(char operacao, double resultado, double primeiroValor, double segundoValor)
+    {
+        public Divisao()
         {
-            this.Operador = operacao;
-            this.Resultado = resultado;
-            this.Num1 = primeiroValor;
-            this.Num2 = segundoValor;
+            Operador = '/';
         }
-
-        public double DivisaoNumeros(double primeiroValor, double segundoValor)
+        public override double RealizarCalculo()
         {
-            double resultado = primeiroValor / segundoValor;
-            
+            double resultado = Num1 / Num2;
+
             HistoricoLog.GravarOperacao(this.ToString());
 
-            return resultado;   
+            this.Resultado = resultado;
+
+            return resultado;
         }
 
     }
